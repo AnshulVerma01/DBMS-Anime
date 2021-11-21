@@ -28,3 +28,16 @@
 * Passwork - pass
 
 The credentials can be changed from the MySQL admin page. Update the "login" table in the database with new credentials.
+
+## Screenshots
+### Login
+<img src="https://github.com/AnshulVerma01/DBMS-Anime/blob/master/images/login.png" width="50%">
+
+### Watched Anime
+<img src="https://github.com/AnshulVerma01/DBMS-Anime/blob/master/images/watched_anime.png" width="50%">
+
+### Read Manga
+<img src="https://github.com/AnshulVerma01/DBMS-Anime/blob/master/images/read_manga.png" width="50%">
+
+### Search
+<img src="https://github.com/AnshulVerma01/DBMS-Anime/blob/master/images/search.png" width="50%">
