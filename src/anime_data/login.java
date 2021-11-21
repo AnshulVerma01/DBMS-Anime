@@ -43,7 +43,7 @@ public class login extends JFrame {
 	public void log() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://127.0.0.1/anime_data","root","");
+			Connection con=DriverManager.getConnection("jdbc:mysql://127.0.0.1/dms_data","root","");
 			Statement stmt=con.createStatement();
 			@SuppressWarnings("deprecation")
 			String sql="Select * from login where user='"+user.getText()+"' and pass='"+pass.getText().toString()+"'";

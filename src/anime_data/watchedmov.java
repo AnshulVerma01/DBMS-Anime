@@ -61,7 +61,7 @@ public class watchedmov extends JFrame {
 		String name = textfield.getText();
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/anime_data","root","");
+			con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/dms_data","root","");
 			pst = con1.prepareStatement("insert into watchedmov(name)values(?)");
 			pst.setString(1, name);
 			pst.executeUpdate();
@@ -78,7 +78,7 @@ public class watchedmov extends JFrame {
 	public void refresh() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/anime_data","root","");
+			con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/dms_data","root","");
 			String sql = "select * from watchedmov";
 			pst = con1.prepareStatement(sql);
 			ResultSet rs = pst.executeQuery();
@@ -92,7 +92,7 @@ public class watchedmov extends JFrame {
 	public void autosort() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/anime_data","root","");
+			con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/dms_data","root","");
 			pst = con1.prepareStatement("SET @count = 0;");
 			pst.executeUpdate();
 			pst = con1.prepareStatement("UPDATE watchedmov SET watchedmov.ID = @count:= @count + 1;");
@@ -359,7 +359,7 @@ public class watchedmov extends JFrame {
 				if(dialogResult==JOptionPane.YES_OPTION) {
 					try {
 						Class.forName("com.mysql.jdbc.Driver");
-						con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/anime_data","root","");
+						con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/dms_data","root","");
 						pst = con1.prepareStatement("delete from watchedmov where ID =?");
 						pst.setInt(1, ID);
 						pst.executeUpdate();
@@ -386,7 +386,7 @@ public class watchedmov extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					Class.forName("com.mysql.jdbc.Driver");
-					con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/anime_data","root","");
+					con1 = DriverManager.getConnection("jdbc:mysql://127.0.0.1/dms_data","root","");
 					String query = "select * from watchedmov where Name LIKE ?";
 					pst=con1.prepareStatement(query);
 					pst.setString(1,"%"+textfield.getText()+"%");
