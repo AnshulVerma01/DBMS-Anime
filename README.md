@@ -12,9 +12,9 @@
 4. Search for an entry.
 
 ## Requirements
-1. [JVM](https://www.java.com/en/download/manual.jsp)
-2. [Eclipse IDE](https://www.eclipse.org/downloads/)
-3. [XAMPP](https://www.apachefriends.org/download.html)
+* [JVM](https://www.java.com/en/download/manual.jsp)
+* [Eclipse IDE](https://www.eclipse.org/downloads/)
+* [XAMPP](https://www.apachefriends.org/download.html)
 
 ## Installation
 * Clone the repository and open with Eclipse (or any other suitable IDE).
